@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="../static/chat.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chat Room</h1>
+    <div>Logged in as: {{ username }}</div>
+    <div id="messages"></div>
+    <div>
+      <input id="myMessage" autocomplete="off"/><button onclick="sendMessage()">Send</button>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+    <script>
+        var socket = io();
+
+        socket.on('message', function(msg){
+            $('#messages').append($('<div>').text(msg));
+        });
+
+        function sendMessage(){
+            var msg = $('#myMessage').val();
+            socket.send(msg);
+            $('#myMessage').val('');
+        }
+    </script>
+</body>
+</html>
