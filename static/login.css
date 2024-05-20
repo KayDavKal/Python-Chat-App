@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+:root {
+  --background: #223355;
+  --color: #ffe;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 80vh;
+  color: var(--color);
+  background: var(--background);
+  font-family: 'Poppins', sans-serif;
+}
