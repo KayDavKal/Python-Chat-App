@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/register.css">
+</head>
+<body>
+    <h1>Register</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Register">
+    </form>
+    <a href="{{ url_for('login') }}">Login</a>
+</body>
+</html>
