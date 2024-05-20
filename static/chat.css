@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+:root {
+  --background: #223355;
+  --chat-bg: #334466;
+  --button-bg: #445577;
+  --color: #ffe;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: var(--color);
+  background: var(--background);
+  font-family: 'Poppins', sans-serif;
+}
+
+#messages {
+  margin: 1rem;
+  padding: 1rem;
+  width: 60vw;
+  height: 60vh;
+  overflow-y: scroll;
+  background: var(--chat-bg);
+  border: none;
+  border-radius: 12px;
+}
+
+input {
+  padding: 0.5rem;
+  border: solid 1px var(--chat-bg);
+  border-radius: 12px 0px 0px 12px;
+  background: var(--button-bg);
+  color: var(--color);
+}
+
+button {
+  padding: 0.5rem;
+  border: solid 1px var(--chat-bg);
+  border-radius: 0px 12px 12px 0px;
+  background: var(--button-bg);
+  color: var(--color);
+}
+
+a {
+  color: var(--color);
+}
