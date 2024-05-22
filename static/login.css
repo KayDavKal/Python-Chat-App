@@ -2,7 +2,9 @@
 
 :root {
   --background: #223355;
+  --card-bg: #334466;
   --color: #ffe;
+  --input-bg: #445577;
 }
 
 html {
@@ -20,4 +22,37 @@ body {
   color: var(--color);
   background: var(--background);
   font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+.card div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: var(--color);
+  background: var(--input-bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.card a {
+  color: var(--color);
 }
