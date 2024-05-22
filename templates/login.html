@@ -5,14 +5,20 @@
     <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
-    <h1>Login</h1>
-    <form method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
-        <input type="submit" value="Login">
-    </form>
-    <a href="{{ url_for('register') }}">Register</a>
+    <div class="card">
+      <h1>Login</h1>
+      <form method="POST">
+          <div>
+            <label for="username"><img src="../static/img/icons/user.svg"></label>
+            <input type="text" name="username" required><br>
+          </div>
+          <div>
+            <label for="password"><img src="../static/img/icons/lock.svg"></label>
+            <input type="password" name="password" required><br>
+          </div>
+          <button type="submit">Login</button>
+      </form>
+      <a href="{{ url_for('register') }}">Register</a>
+    </div>
 </body>
 </html>
